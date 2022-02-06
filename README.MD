@@ -2,6 +2,8 @@
 
 This is the output plugin for Data-Forge Notebook v2 that displays structured JavaScript data.
 
+[Join the discussion on how user pluggable visualizations should work in DFN v2](https://github.com/data-forge-notebook/editor-core/issues/1)
+
 [Follow the developer on Twitter for news and updates](https://twitter.com/codecapers)
 
 [Click for the main DFN code repository](https://github.com/data-forge-notebook/editor-core)
