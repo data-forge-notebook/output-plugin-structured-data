@@ -36,3 +36,6 @@ npm run start:dev
 npm run build
 ```
 
+## Publish the plugin
+
+Simply commit and push `out/index.html` (might want to have a plugin registry in the future!).
