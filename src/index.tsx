@@ -32,6 +32,8 @@ class App extends React.Component<{}, IAppState> {
 
                 event.source?.postMessage({
                     name: "configured",
+                }, { 
+                    targetOrigin: event.origin,
                 });
             }
         });
