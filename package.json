@@ -7,10 +7,11 @@
     "sd": "npm run start:dev",
     "start": "npm run build && live-server out --cors --port=5000 --no-browser",
     "s": "npm run start",
-    "build": "parcel build index.html --public-url . && inliner dist/index.html > out/index.html",
+    "build": "parcel build index.html --public-url . && npm run module-hack && inliner dist/index.html > out/index.html",
     "b": "npm run build",
     "tsc": "tsc",
-    "clean": "rm -rf dist out/* .parcel-cache"
+    "clean": "rm -rf dist out/* .parcel-cache",
+    "module-hack": "node module-hack.js"
   },
   "keywords": [],
   "author": "ashley@codecapers.com.au",
