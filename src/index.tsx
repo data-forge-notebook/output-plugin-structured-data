@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { StructuredData } from "./structured-data";
+import { connect } from "./host-communication-bridge";
 
 interface IAppState {
     //
     // Structured data to be displayed.
+    //
     data?: any;
 }
 
@@ -16,26 +18,15 @@ class App extends React.Component<{}, IAppState> {
         this.state = {};
     }
 
-    componentDidMount() {
-        window.addEventListener("message", event => {
-            console.log(`Output plugin received message: `);
-            console.log(event);
-
-            const payload = event.data;
-            if (payload.name === "config") {
-                // 
-                // Configures the plugin.
-                //
+    async componentDidMount() {
+        // Connects to the visualization host.
+        await connect({
+            // Configures the plugin.
+            configure: async (options) => {
                 this.setState({
-                    data: payload.data,
+                    data: options.data,
                 });
-
-                event.source?.postMessage({
-                    name: "configured",
-                }, { 
-                    targetOrigin: event.origin,
-                });
-            }
+            },
         });
     }
 
