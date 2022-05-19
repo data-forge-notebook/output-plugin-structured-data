@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { StructuredData } from "./structured-data";
-import { connect } from "./host-communication-bridge";
+import { connect, IVizConfig } from "./host-communication-bridge";
 
 interface IAppState {
     //
-    // Structured data to be displayed.
+    // Plugin configuration.
     //
-    data?: any;
+    config?: IVizConfig;
 }
 
 class App extends React.Component<{}, IAppState> {
@@ -22,9 +22,9 @@ class App extends React.Component<{}, IAppState> {
         // Connects to the visualization host.
         await connect({
             // Configures the plugin.
-            configure: async (options) => {
+            configure: async (config) => {
                 this.setState({
-                    data: options.data,
+                    config: config,
                 });
             },
         });
@@ -33,7 +33,7 @@ class App extends React.Component<{}, IAppState> {
     render() {
         return (
             <StructuredData
-                data={this.state.data}
+                data={this.state.config?.data}
                 />
         );
     }

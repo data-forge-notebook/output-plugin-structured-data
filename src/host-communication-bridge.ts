@@ -6,7 +6,7 @@ export interface IVizConfig {
     //
     // Identifies the type of data being visualized.
     //
-    displayType: string;
+    displayType?: string;
 
     //
     // The data to be visualized.
@@ -23,7 +23,6 @@ export interface IConnectOptions {
     // Callback for the host to configure the visualization plugin.
     //
     configure: (config: IVizConfig) => Promise<void>;
-
 }
 
 //
