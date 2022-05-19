@@ -1,12 +1,12 @@
-# Data-Forge Notebook output plugin: structured data
+# Data-Forge Notebook viz plugin: structured data
 
-This is the output plugin for Data-Forge Notebook v2 that displays structured JavaScript data.
+This is the visualization plugin for Data-Forge Notebook v2 that displays structured JavaScript data.
 
 [Join the discussion on how user pluggable visualizations should work in DFN v2](https://github.com/data-forge-notebook/editor-core/issues/1)
 
 [Follow the developer on Twitter for news and updates](https://twitter.com/codecapers)
 
-[Click for the main DFN code repository](https://github.com/data-forge-notebook/editor-core)
+[Checkout the main DFN code repository](https://github.com/data-forge-notebook/editor-core)
 
 ## Setup
 
@@ -37,7 +37,3 @@ npm run start:dev
 ```bash
 npm run build
 ```
-
-## Publish the plugin
-
-Simply commit and push `out/index.html` (might want to have a plugin registry in the future!).
