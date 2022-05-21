@@ -1,5 +1,7 @@
 # Data-Forge Notebook viz plugin: structured data
 
+The code for this plugin has been merged into the [editor-core mono repo](https://github.com/data-forge-notebook/editor-core/).
+
 This is the visualization plugin for Data-Forge Notebook v2 that displays structured JavaScript data.
 
 [Join the discussion on how user pluggable visualizations should work in DFN v2](https://github.com/data-forge-notebook/editor-core/issues/1)
